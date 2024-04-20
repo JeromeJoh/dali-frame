@@ -22,21 +22,20 @@
 
 This project is inspired by [hadicraft videos about Yugioh cards](https://www.bilibili.com/video/BV1RW41167n8/?share_source=copy_web&vd_source=140f65e67f08ae8d9864ad5c35758947). Several same cards are carved out different parts, and the parts are glued together in a specific order, finnaly presenting a modle with 3D effect.Here I want achieve this kind of effect by using HTML, CSS and JS.
 
-### Built With
-
-- Vanilla JS
-- GSAP
-
 ## Installation
 
 Run this demo on a [local server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
 
-### Preview
+## Preview
 
 ![preview](./images/preview-1.jpg)
 
-### Contact
+## Contact
 
 Author: [jerome200069@outlook.com](mailto:jerome200069@outlook.com)
 
 Demo Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
+## License
+
+[MIT](LICENSE)
