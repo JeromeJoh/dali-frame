@@ -46,6 +46,52 @@ function render() {
 
 init()
 
+// entance animation
+const $topSide = document.querySelector('.top-side')
+const $bottomSide = document.querySelector('.bottom-side')
+const $leftSide = document.querySelector('.left-side')
+const $rightSide = document.querySelector('.right-side')
+
+const $topLine = document.querySelector('.top-line')
+const $bottomLine = document.querySelector('.bottom-line')
+const $leftLine = document.querySelector('.left-line')
+const $rightLine = document.querySelector('.right-line')
+
+const entranceTl = gsap.timeline({
+  duration: .6,
+})
+
+entranceTl
+  .to([$topSide, $leftSide, $bottomSide, $rightSide], {
+    scale: 1,
+  })
+  .to([$leftSide, $rightSide], {
+    rotate: -90
+  })
+  .to([$topSide, $bottomSide], {
+    y: (index) => index === 0 ? -100 : 100
+  })
+  .to([$leftSide, $rightSide], {
+    xPercent: (index) => index === 0 ? -15 : 15,
+  })
+  .to([$topSide, $leftSide, $bottomSide, $rightSide], {
+    scale: 2,
+    opacity: 0
+  })
+  .to([$topLine, $bottomLine], {
+    scaleX: 1,
+    opacity: 0
+  })
+  .to([$leftLine, $rightLine], {
+    scaleY: 1,
+    opacity: 0
+  }, '-=.6')
+  .from('.frame', {
+    backgroundColor: '#dddddd'
+  }, '-=.6')
+
+
+
 // scroll animation
 gsap.registerPlugin(ScrollTrigger)
 
