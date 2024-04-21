@@ -15,9 +15,13 @@ requestAnimationFrame(raf)
 // initialize page
 const init = () => {
   render()
+  bindEvents()
 }
 
-const ARTWORK_COUNT = 4
+function bindEvents() {
+}
+
+const ARTWORK_COUNT = 5
 
 function render() {
   const $pagination = document.querySelector('.pagination')
@@ -89,6 +93,10 @@ entranceTl
   .from('.frame', {
     backgroundColor: '#dddddd'
   }, '-=.6')
+  .to('.pagination', {
+    opacity: 1,
+    onComplete: () => document.addEventListener('scroll',)
+  })
 
 
 
