@@ -19,6 +19,18 @@ const init = () => {
 }
 
 function bindEvents() {
+  const arrows = document.querySelectorAll(".ping")
+
+  window.addEventListener('mousemove', function (event) {
+    arrows.forEach(function (arrow) {
+      let angle = Math.atan2(event.clientX - arrow.getBoundingClientRect()
+        .left - arrow.clientLeft / 2, event.clientY - arrow.getBoundingClientRect().top
+      - arrow.clientTop / 2)
+      let rot = angle * 180 / Math.PI * -1 - 180
+
+      arrow.style.transform = `rotate(${rot}deg)`
+    })
+  })
 }
 
 const ARTWORK_COUNT = 5
@@ -45,7 +57,6 @@ function render() {
 
   $numerator.appendChild($inner)
   $pagination.append($numerator, ' / ', $denominator)
-  console.log('render')
 }
 
 init()
@@ -94,8 +105,7 @@ entranceTl
     backgroundColor: '#dddddd'
   }, '-=.6')
   .to('.pagination', {
-    opacity: 1,
-    onComplete: () => document.addEventListener('scroll',)
+    opacity: 1
   })
 
 
