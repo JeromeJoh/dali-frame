@@ -1,5 +1,3 @@
-// TODO: 开屏动画（媒体查询？）
-// TODO: 四周边框展开动画
 
 // smooth scroll
 const lenis = new Lenis()
@@ -87,7 +85,7 @@ entranceTl
     y: (index) => index === 0 ? -100 : 100
   })
   .to([$leftSide, $rightSide], {
-    xPercent: (index) => index === 0 ? -15 : 15,
+    x: (index) => index === 0 ? -85 : 85,
   })
   .to([$topSide, $leftSide, $bottomSide, $rightSide], {
     scale: 2,
