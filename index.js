@@ -1,4 +1,4 @@
-
+// TODO: add new artwork
 // smooth scroll
 const lenis = new Lenis()
 
