@@ -138,7 +138,7 @@ const indicatorTween = gsap.to('.inner', {
 
 
 // [Artwork-6] water reflection animation
-const timeline = new TimelineMax({
+const timeline = gsap.timeline({
   repeat: -1,
   yoyo: true
 })
