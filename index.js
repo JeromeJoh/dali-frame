@@ -145,14 +145,12 @@ const timeline = gsap.timeline({
 
 const feTurb = document.querySelector('#feturbulence');
 
-timeline.add(
-  new TweenMax.to(feTurb, 8, {
-    onUpdateParams: [feTurb], //pass the filter element to onUpdate
-    onUpdate: function (fe) {
-      const bfX = this.progress() * 0.005 + 0.015, //base frequency x
-        bfY = this.progress() * 0.05 + 0.1, //base frequency y
-        bfStr = bfX.toString() + ' ' + bfY.toString(); //base frequency string
-      fe.setAttribute('baseFrequency', bfStr);
-    }
-  }), 0
-);
+timeline.to(feTurb, {
+  duration: 8,
+  onUpdate: function () {
+    const progress = this.progress();
+    const bfX = progress * 0.005 + 0.015;
+    const bfY = progress * 0.05 + 0.1;
+    feTurb.setAttribute('baseFrequency', `${bfX} ${bfY}`);
+  }
+});
