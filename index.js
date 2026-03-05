@@ -85,7 +85,7 @@ entranceTl
     y: (index) => index === 0 ? -100 : 100
   })
   .to([$leftSide, $rightSide], {
-    x: (index) => index === 0 ? -85 : 85,
+    xPercent: (index) => index === 0 ? -20 : 20,
   })
   .to([$topSide, $leftSide, $bottomSide, $rightSide], {
     scale: 2,
